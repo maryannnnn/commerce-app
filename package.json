@@ -1,0 +1,43 @@
+{
+  "name": "mern-commerce-app",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "production node backend/server.js",
+    "startenv": "cross-env NODE_ENV=production node backend/server.js",
+    "backend": "nodemon --watch backend --exec node --experimental-modules backend/server.js --prefix backend",
+    "frontend": "npm run start --prefix frontend",
+    "dev": "cross-env NODE_ENV=development concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "author": "Maryan Polyak",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "config": "^3.3.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.3",
+    "multer": "^1.4.2",
+    "react-meta-tags": "^1.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.0",
+    "concurrently": "^6.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-react": "^7.23.2",
+    "nodemon": "^2.0.7"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  }
+}
