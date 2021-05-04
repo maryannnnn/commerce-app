@@ -2,5 +2,6 @@
     "port": 5000,
     "mongoUri": "mongodb+srv://marian:marian737marian@cluster0.jmsg0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
     "baseUrl": "http://localhost:5000",
-    "paypalClientId": "AW5z3GV8KBX56YcKx0S4PuYDQKdRkGMIutJ0hHMzE78OIo3zG5ZxvFwWrI-OkL0Z0lUDKq6FVj_by-hm"
+    "paypalClientId": "AW5z3GV8KBX56YcKx0S4PuYDQKdRkGMIutJ0hHMzE78OIo3zG5ZxvFwWrI-OkL0Z0lUDKq6FVj_by-hm",
+    "jwtSecret": "somethingsecret"
   }
