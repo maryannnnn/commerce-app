@@ -11,7 +11,7 @@ phases:
       - echo "✅ Packages Front-end Back-end installed successfully."
   build:
     commands:
-      - cd frontend && npm run build --force
+      - cd ../frontend && npm run build --force
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
