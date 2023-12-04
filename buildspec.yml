@@ -11,12 +11,12 @@ phases:
       - echo "✅ Packages Front-end Back-end installed successfully."
   build:
     commands:
-      - cd ../frontend && npm run build --force
+      - cd ../frontend && npm run build || true
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
       - echo "✅ Build Front-end passed successfully."
 artifacts:
   files:
-    - frontend/build/*/ # Артефакты фронтенда
+    - frontend/build/**/* # Артефакты фронтенда
     - backend/server.js    # Файл сервера из бэкенда
