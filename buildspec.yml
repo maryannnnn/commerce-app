@@ -6,7 +6,7 @@ phases:
       nodejs: 18
     commands:
       - cd frontend && npm install --legacy-peer-deps
-      - cd backend && npm install --legacy-peer-deps
+      - cd ../backend && npm install --legacy-peer-deps
       - echo "📦 installing Front-end Back-end packages..."
       - echo "✅ Packages Front-end Back-end installed successfully."
   build:
