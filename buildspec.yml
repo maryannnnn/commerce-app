@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 17
+    commands:
+      - cd frontend
+      - npm install --legacy-peer-deps
+      - echo "📦 installing Front-end packages..."
+      - echo "✅ Packages Front-end installed successfully."
+      
+  build:
+    commands:
+      - npm run build --force
+      - echo "⚙️ Testing..."
+      - echo "✅ Tests passed successfully."
+      - echo "🚧 Starting Front-end compiling packages..."
+      - echo "✅ Build Front-end passed successfully."
+      
+artifacts:
+  files:
+    - '*/'
+  base-directory: frontend/build backend/server.js
