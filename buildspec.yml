@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 17
+      nodejs: 18
     commands:
       - cd frontend
       - npm install --legacy-peer-deps
