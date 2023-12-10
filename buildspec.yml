@@ -11,7 +11,7 @@ phases:
     runtime-versions:
       nodejs: 18
     commands:
-      - npm ci --legacy-peer-deps
+      - npm install --legacy-peer-deps
       - cd frontend && npm install --legacy-peer-deps
       - cd ../backend && npm install --legacy-peer-deps
       - echo "📦 installing Front-end Back-end packages..."
@@ -19,7 +19,6 @@ phases:
   build:
     commands:
       - cd ../frontend && npm run build || true
-      - cd ../backend && npm run build || true
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
