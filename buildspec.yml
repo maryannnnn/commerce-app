@@ -25,5 +25,5 @@ phases:
       - echo "✅ Build Front-end passed successfully."
 artifacts:
   files:
-    - frontend/build/**/* # Артефакты фронтенда
-    - backend/server.js    # Файл сервера из бэкенда
+    - frontend/build/**/*
+    - backend/server.js 
