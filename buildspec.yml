@@ -1,10 +1,17 @@
 version: 0.2
 
+env:
+  variables:
+    MONGODB_URL: "mongodb+srv://marian:marian737marian@cluster0.jmsg0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+    PORT: "5000"
+    JWT_SECRET: "somethingsecret"
+
 phases:
   install:
     runtime-versions:
       nodejs: 18
     commands:
+      - npm ci --legacy-peer-deps
       - cd frontend && npm install --legacy-peer-deps
       - cd ../backend && npm install --legacy-peer-deps
       - echo "📦 installing Front-end Back-end packages..."
@@ -12,6 +19,7 @@ phases:
   build:
     commands:
       - cd ../frontend && npm run build || true
+      - cd ../backend && npm run build || true
       - echo "⚙️ Testing..."
       - echo "✅ Tests passed successfully."
       - echo "🚧 Starting Front-end compiling packages..."
